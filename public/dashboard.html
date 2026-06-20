@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>dashboard — babageyus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link rel="stylesheet" href="/css/dashboard.css"/>
+</head>
+<body class="dash-body">
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="blob b1"></div>
+<div class="blob b2" style="right:-60px;bottom:-60px;left:auto;top:auto"></div>
+<div class="noise"></div>
+
+<nav class="dash-nav">
+  <div class="nav-brand"><span class="brand-or">BABA</span><span class="brand-wh">GEYUS</span></div>
+  <div class="nav-right">
+    <div class="nav-user" id="navUser">
+      <img class="nav-avatar" id="navAvatar" src="" alt=""/>
+      <span id="navUsername">loading...</span>
+    </div>
+    <a href="/auth/logout" class="nav-logout">logout</a>
+  </div>
+</nav>
+
+<main class="dash-main">
+  <div class="dash-header">
+    <div class="dash-greeting" id="dashGreeting">hey,</div>
+    <div class="dash-sub">here's your babageyus overview</div>
+  </div>
+
+  <div class="cards-row">
+    <div class="d-card">
+      <div class="d-card-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> total hits</div>
+      <div class="d-card-num" id="dHits">—</div>
+      <div class="d-card-sub">all-time executions</div>
+    </div>
+    <div class="d-card">
+      <div class="d-card-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> total users</div>
+      <div class="d-card-num" id="dUsers">—</div>
+      <div class="d-card-sub">registered members</div>
+    </div>
+    <div class="d-card">
+      <div class="d-card-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> member since</div>
+      <div class="d-card-num" id="dJoined">—</div>
+      <div class="d-card-sub">your join date</div>
+    </div>
+  </div>
+
+  <div class="profile-grid">
+    <div class="profile-card">
+      <div class="pc-header">
+        <img class="pc-avatar" id="pcAvatar" src="" alt=""/>
+        <div>
+          <div class="pc-name" id="pcName">—</div>
+          <div class="pc-id" id="pcId">—</div>
+        </div>
+      </div>
+      <div class="pc-sep"></div>
+      <div class="pc-field">
+        <label>roblox username</label>
+        <div class="pc-input-row">
+          <input type="text" id="robloxInput" placeholder="your roblox username" maxlength="20"/>
+          <button class="save-btn" id="saveRoblox">save</button>
+        </div>
+      </div>
+      <div class="pc-field">
+        <label>webhook url</label>
+        <div class="pc-input-row">
+          <input type="text" id="webhookInput" placeholder="https://discord.com/api/webhooks/..." maxlength="300"/>
+          <button class="save-btn" id="saveWebhook">save</button>
+        </div>
+      </div>
+      <div id="saveMsg" class="save-msg" style="display:none"></div>
+    </div>
+
+    <div class="info-card">
+      <div class="ic-title">your profile</div>
+      <div class="ic-row">
+        <span class="ic-lbl">discord id</span>
+        <span class="ic-val" id="icDiscordId">—</span>
+      </div>
+      <div class="ic-row">
+        <span class="ic-lbl">username</span>
+        <span class="ic-val" id="icUsername">—</span>
+      </div>
+      <div class="ic-row">
+        <span class="ic-lbl">roblox</span>
+        <span class="ic-val" id="icRoblox">not set</span>
+      </div>
+      <div class="ic-row">
+        <span class="ic-lbl">webhook</span>
+        <span class="ic-val" id="icWebhook">not set</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/js/cursor.js"></script>
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
